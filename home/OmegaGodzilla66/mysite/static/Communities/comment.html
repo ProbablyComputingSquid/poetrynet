@@ -1,0 +1,17 @@
+<script>
+      function chat(){
+
+        var ld= localStorage.getItem("pn:login_details");
+        var data= document.getElementById("txt").value.replace("?","(*q)").replace("/","(*s)");
+        var ttl = document.getElementById("ttl").innerHTML;
+        var usr = document.getElementById("usr").innerHTML;
+        var com = document.getElementById("com").innerHTML;
+        window.open("https://omegagodzilla66.pythonanywhere.com/poetrynet/community/createcomment/"+ld+"(*)"+com+"(*)"+ttl+"(*)"+data);
+        // username(*)password(*)community(*)postTitle(*)contents
+
+      }
+    </script>
+    <form>
+<input type="text" id="txt" placeholder="Write comment"/>
+<input type="submit" value="Comment" onclick="chat()"/><br>
+</form>

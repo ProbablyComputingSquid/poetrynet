@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>POETRYNET - Create Board</title>
+    <style>
+      #createboard {
+        width: 250px;
+        height: 30px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-family: Montserrat;
+        padding: 0 20px 0 50px;
+        outline: none;
+        text-align: center;
+      }
+      #createboard:hover {
+        background-color: #ff656c;
+        cursor: hand;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function test(){
+        var data = document.getElementById("txt").value.replace("?","(*q)").replace("/","(*s)");
+        var details=localStorage.getItem("pn:login_details");
+        window.open("https://omegagodzilla66.pythonanywhere.com/poetrynet/multichat/createboard/"+data+'(*)'+details);
+      }
+    </script>
+    <h1>POETRYNET - Create board</h1>
+    <p>To create a message board, input a name and press Create. </p>
+    <form>
+<input type="text" id="txt" placeholder="The Name of your Board"/>
+<input type="submit" value="Create" onclick="test()"/><br>
+</form>
+  </body>
+</html>

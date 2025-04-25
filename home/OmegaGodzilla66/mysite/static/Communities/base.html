@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>POETRYNET 2.0 Communities</title>
+  </head>
+  <body>
+
+    <h1>POETRYNET 2.0 Communities</h1>
+    <p>To view a community input the name of the community and then press view community. You will then be redirected to the community. To create your own message board go to <a href='/poetrynet'>this link (coming soon).</a></p>
+    <p>Additional note from the devs: This feature is still in development. More things will come online as said development progresses.</p>
+    <script>
+      function chat(){
+
+        var ld= localStorage.getItem("pn:login_details");
+        var data= document.getElementById("txt").value.replace("?","(*q)").replace("/","(*s)");
+        window.open("https://omegagodzilla66.pythonanywhere.com/poetrynet/community/"+ld+"(*)"+data);
+      }
+    </script>
+    <form>
+<input type="text" id="txt" placeholder="Community Name"/>
+<input type="submit" value="View Community" onclick="chat()"/><br>
+</form>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>POETRYNET - Chat</title>
+  </head>
+  <body>
+
+    <h1>POETRYNET - Chat</h1>
+    <p>To enter a chatroom input the name of the room and then press enter room. You will then be redirected to the chatroom. To enter the defualt board, input "board". To create your own message board go to <a href='/poetrynet/multichat/addboard'>this link.</a></p>
+    <p>Additional note from the devs: This is still coming back online, and there is a strong possibility that rooms may not exist. We're sorry for the inconvinience as we work to get the site back online.</p>
+    <script>
+      function chat(){
+        var data= document.getElementById("txt").value.replace("?","(*q)").replace("/","(*s)");
+        window.open("https://omegagodzilla66.pythonanywhere.com/poetrynet/chatroom/"+data)
+      }
+    </script>
+    <form>
+<input type="text" id="txt" placeholder="Room Name"/>
+<input type="submit" value="Enter Room" onclick="chat()"/><br>
+</form>
+  </body>
+</html>[

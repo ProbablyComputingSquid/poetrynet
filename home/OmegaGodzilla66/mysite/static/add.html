@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Create Account</title>
+  <link rel="stylesheet" href="static/login.css">
+  </head>
+  <body>
+    <script>
+      if (localStorage.getItem("pn:login")=='yes'){
+        window.location.replace('/poetrynet/login/'+localStorage.getItem("pn:login_details"))
+      }
+      function a1(){
+        var username=document.getElementById("pn:username").value.replace("?","(*q)").replace("/","(*s)");
+        var password=document.getElementById("pn:password").value.replace("?","(*q)").replace("/","(*s)");
+        window.open("https://omegagodzilla66.pythonanywhere.com/poetrynet/createaccount/"+username+'(*)'+password);
+      }
+    </script>
+    <div class="login-block">
+    <h1>POETRYNET - Create Account</h1>
+    <p>Create your own POETRYNET account using the form bellow.</p>
+    <form>
+      <p>Username: </p><input type="text" id="username"/>
+      <p>Password: </p><input type="text" id="password"/>
+      <input type="submit" value="
+    I agree to the Terms of Service" onclick="a1()" id="Button"/><br>
+      <a href='/poetrynet/termsofservice'>Terms of Service.</a>
+    </form>
+      </div>
+  </body>
+</html>

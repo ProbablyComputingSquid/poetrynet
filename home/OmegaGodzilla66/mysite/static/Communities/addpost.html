@@ -1,0 +1,18 @@
+<script>
+      function chat(){
+
+        var ld= localStorage.getItem("pn:login_details");
+        var data= document.getElementById("txt").value.replace("?","(*q)").replace("/","(*s)");
+        var ttl = document.getElementById("ttl").innerHTML.value.replace("?","(*q)").replace("/","(*s)");
+        var usr = document.getElementById("usr").innerHTML.value.replace("?","(*q)").replace("/","(*s)");
+        var com = document.getElementById("com").innerHTML.value.replace("?","(*q)").replace("/","(*s)");
+        window.open("https://omegagodzilla66.pythonanywhere.com/poetrynet/community/createpost/"+ld+"(*)"+com+"(*)"+ttl+"(*)"+data);
+        // username(*)password(*)community(*)title(*)contents
+
+      }
+    </script>
+    <form>
+<input type="text" id="ttl" placeholder="Post title"/>
+<input type="text" id="txt" placeholder="Post contents"/>
+<input type="submit" value="Comment" onclick="chat()"/><br> <!-- if you're wondering why all of the functions are chat and the code looks oddly similar, as if it were copy pasted, don't. Thinking is bad. just scroll. -->
+</form

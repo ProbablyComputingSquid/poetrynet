@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>POETRYNET - Report Bug</title>
+  </head>
+  <body>
+    <script>
+      function test(){
+        var data= document.getElementById("txt").value.replace("?","(*q)").replace("/","(*s)");
+        window.open("https://omegagodzilla66/poetrynet/multimsg/bugs(*)"+data+'(*)'+localStorage.getItem("pn:login_details"));
+      }
+    </script>
+    <h1>POETRYNET - Bug Report</h1>
+    <p>Thank you so much for taking the time to report a bug. We really apreciate you taking the time to make our service better. Describe the issue in the message box, and we will get to it as soon as we can. </p>
+    <form>
+<input type="text" id="txt" placeholder="Describe the Bug"/>
+<input type="submit" value="Send Report" onclick="test()"/><br>
+</form>
+  </body>
+</html>
